@@ -34,7 +34,7 @@
             <div class="row">
                 <div class="about-col-1">
                     <img src="Images/download.jpeg">
-                    <p> Iam a music producer and beat maker with 5 years of experience turning ideas into sound. 
+                    <p> I am a music producer and beat maker with 5 years of experience turning ideas into sound. 
                         What started as a passion for creating beats has grown into a creative journey of 
                         producing, selling, and collaborating with artists from different backgrounds.</p>
                 </div>
@@ -45,21 +45,59 @@
       <div id="beats">
         <div class="container">
             <h1 class="beats-title">Beats</h1>
-            <div class="beats-list">
-             <div class="beat">
-                <p class=""beat-name>Careless Type Beat</p>
-                <audio controls preload="none" src="Audio/careless-type-beat.wav"></audio>
-             </div>
-             <div class="beat">
-                <p class=""beat-name>20:22 Type Beat</p>
-                <audio controls preload="none" src="Audio/20-22-type-beat.wav"></audio>
-             </div>
-             <div class="beat">
-                <p class=""beat-name>Moneybagg Yo Type Beat</p>
-                <audio controls preload="none" src="Audio/moneybagg-yo-type-beat.wav"></audio>
+
+             <div class="player">
+               <div class="player-art"> 
+                <img src="Images/download.jpeg">
+               </div>
+               <div class="player-main">
+                <button class="play-btn" id="playBtn">
+                  <span id="playIcon">&#9658;</span>
+                </button>
+                <div class="player-info">
+                  <p class="player-artist">IMFWAJ</p>
+                  <h2 class="player-track" id="trackTitle">Careless Type Beat</h2>
+                </div>
+                <div class="player-transport">
+                  <button class="skip-btn" id="prevBtn">&#9198;</button>
+                  <input type="range" id="seekBar" value="0" min="0" max="100" step="0.1">
+                  <button class="skip-btn" id="nextBtn">&#9197;</button>
+                </div>
+               </div>
+              </div>
+            <ol class="tracklist" id="tracklist">
+              <li class="track active" data-src="Audio/careless-type-beat.wav" data-name="Careless Type Beat">
+                <span class="track-num">1</span>
+                <span class="track-name">Careless Type Beat</span>
+              </li>
+              <li class="track" data-src="Audio/20-22-type-beat.wav" data-name="20:22 Type Beat">
+                <span class="track-num">2</span>
+                <span class="track-name">20:22 Type Beat</span>
+              </li>
+              <li class="track" data-src="Audio/cold-heart-type-beat.wav" data-name="Cold Heart Type Beat">
+                <span class="track-num">3</span>
+                <span class="track-name">Cold Heart Type Beat</span>
+              </li>
+              <li class="track" data-src="Audio/molly-girl-type-beat.wav" data-name="Molly Girl Type Beat">
+                <span class="track-num">4</span>
+                <span class="track-name">Molly Girl Type Beat</span>
+              </li>
+              <li class="track" data-src="Audio/4-pockets-full-type-beat.wav" data-name="4 Pockets Full Type Beat">
+                <span class="track-num">5</span>
+                <span class="track-name">4 Pockets Full Type Beat</span>
+              </li>
+              <li class="track" data-src="Audio/big-game-type-beat.wav" data-name="Big Game Type Beat">
+                <span class="track-num">6</span>
+                <span class="track-name">Big Game Type Beat</span>
+              </li>
+              <li class="track" data-src="Audio/harvard-yeat-type-beat.wav" data-name="Harvard Yeat Type Beat">
+                <span class="track-num">7</span>
+                <span class="track-name">Harvard Yeat Type Beat</span>
+              </li>
+            </ol>  
+              <audio id="audioEl" preload="metadata"></audio> 
              </div>
             </div>
-        </div>
-     </div>
+            <script src="script.js"></script>
   </body>
 </html>
