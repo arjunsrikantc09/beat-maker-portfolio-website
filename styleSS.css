@@ -87,6 +87,16 @@ nav ul li a:hover::after {
     font-family: 'Rye', serif;
 }
 
+.beats-btn {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 13px 38px;
+    background: darkred;
+    color: #fff;
+    border: 3px solid #fff;
+
+}
+
 /*-------------------------About--------------*/
 #about {
     padding: 80px 0;
