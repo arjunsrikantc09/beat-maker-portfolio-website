@@ -151,4 +151,18 @@ trackItems.forEach((item, index) => {
     item.addEventListener('click', () => loadTrack(index, true));
 });
 
+document.querySelectorAll('.track-buy').forEach((btn) => {
+    btn.addEventListener('click', (e) => e.stopPropagation());
+});
+
 loadTrack(0, false);
+
+const testimonialForm = document.querySelector('.testimonial-form');
+testimonialForm.addEventListener('submit', () => {
+    setTimeout(() => testimonialForm.reset(), 300);
+});
+
+const contactForm = document.querySelector('#contact form');
+contactForm.addEventListener('submit', () => {
+    setTimeout(() => contactForm.reset(), 300);
+});
