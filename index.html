@@ -27,7 +27,10 @@
         <img src="Images/IMFWAJ_logo.PNG" class="header-logo">
         <div class="container">
             <nav>
-                <ul>
+              <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+              </button>
+                <ul id="navLinks">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#stats">Stats</a></li>
@@ -54,13 +57,13 @@
       <div id="about">
         <div class="container">
             <div class="row">
-                <div class="about-col-1">
+                <div class="about-col-1 fade-in">
                     <img src="Images/About_me_pic.jpeg">
                 </div>
-                <div class="about-col-2">
-                    <p> I am a music producer and beat maker with 5 years of experience turning ideas into sound. 
-                        What started as a passion for creating beats has grown into a creative journey of 
-                        producing, selling, and collaborating with artists from different backgrounds.</p>
+                <div class="about-col-2 fade-in">
+                    <p> I'm a music producer and beat maker blending hyperpop, hip-hop, and rock into my own style of DMV underground trap. 
+                        Over 5 years, that mix of influences has grown into a full creative journey — producing, selling, and collaborating 
+                        with artists from all kinds of backgrounds.</p>
                 </div>
             </div>
         </div>
@@ -68,18 +71,18 @@
       <!---------------------Stats--------------------------->
       <div id="stats">
         <div class="container">
-          <h1 class="section-title">YouTube Stats</h1>
-          <div class="stats-grid">
+          <h1 class="section-title fade-in">YouTube Stats</h1>
+          <div class="stats-grid fade-in">
             <div class="stat-card">
-              <p class="stat-number">4,350+</p>
+              <p class="stat-number">4,320+</p>
               <p class="stat-label">Subscribers</p>
             </div>
             <div class="stat-card">
-              <p class="stat-number">2.2<br>million+</p>
+              <p class="stat-number">2.1<br>million+</p>
               <p class="stat-label">Views</p>
               </div>
             <div class="stat-card">
-              <p class="stat-number">260+</p>
+              <p class="stat-number">255+</p>
               <p class="stat-label">Beats</p>
               </div>
             <div class="stat-card">
@@ -93,8 +96,8 @@
     <!------------------------Services---------------->
       <div id="services">
         <div class="container">
-          <h1 class="section-title">Services</h1>
-          <div class="services-grid">
+          <h1 class="section-title fade-in">Services</h1>
+          <div class="services-grid fade-in">
             <div class="service-square">
               <div class="service-icon">$$</div>
               <p class="service-text">You can buy beats from me</p>
@@ -109,9 +112,9 @@
     <!--------------------Beats----------------------------------->
       <div id="beats">
         <div class="container">
-            <h1 class="beats-title">Beats</h1>
+            <h1 class="beats-title fade-in">Beats</h1>
 
-             <div class="player">
+             <div class="player fade-in">
                <div class="player-art"> 
                 <img src="Images/download.jpeg">
                </div>
@@ -121,7 +124,7 @@
                 </button>
                 <div class="player-info">
                   <p class="player-artist">IMFWAJ</p>
-                  <h2 class="player-track" id="trackTitle">Careless Type Beat</h2>
+                  <h2 class="player-track" id="trackTitle">AIMED IN</h2>
                 </div>
                 <div class="player-transport">
                   <button class="skip-btn" id="prevBtn">&#9198;</button>
@@ -131,40 +134,55 @@
                </div>
                <canvas id="visualizer" class="visualizer"></canvas>
               </div>
-            <ol class="tracklist" id="tracklist">
-              <li class="track active" data-src="Audio/careless-type-beat.mp3" data-name="Careless Type Beat">
+            <ol class="tracklist fade-in" id="tracklist">
+              <li class="track active" data-src="Audio/AIMED IN.mp3" data-name="AIMED IN">
                 <span class="track-num">1</span>
-                <span class="track-name">Careless Type Beat</span>
+                <span class="track-name">AIMED IN</span>
                 <a href="#contact" class="track-buy">$40</a>
               </li>
-              <li class="track" data-src="Audio/20-22-type-beat.mp3" data-name="20:22 Type Beat">
+              <li class="track" data-src="Audio/RELEASE.mp3" data-name="RELEASE">
                 <span class="track-num">2</span>
-                <span class="track-name">20:22 Type Beat</span>
+                <span class="track-name">RELEASE</span>
                 <a href="#contact" class="track-buy">$40</a>
               </li>
-              <li class="track" data-src="Audio/cold-heart-type-beat.mp3" data-name="Cold Heart Type Beat">
+              <li class="track" data-src="Audio/BLUEPRINT.mp3" data-name="BLUEPRINT">
                 <span class="track-num">3</span>
-                <span class="track-name">Cold Heart Type Beat</span>
+                <span class="track-name">BLUEPRINT</span>
                 <a href="#contact" class="track-buy">$40</a>
               </li>
-              <li class="track" data-src="Audio/molly-girl-type-beat.mp3" data-name="Molly Girl Type Beat">
+              <li class="track" data-src="Audio/RECEPTION.mp3" data-name="RECEPTION">
                 <span class="track-num">4</span>
-                <span class="track-name">Molly Girl Type Beat</span>
+                <span class="track-name">RECEPTION</span>
                 <a href="#contact" class="track-buy">$40</a>      
               </li>
-              <li class="track" data-src="Audio/4-pockets-full-type-beat.mp3" data-name="4 Pockets Full Type Beat">
+              <li class="track" data-src="Audio/SPACEMAN.mp3" data-name="SPACEMAN">
                 <span class="track-num">5</span>
-                <span class="track-name">4 Pockets Full Type Beat</span>
+                <span class="track-name">SPACEMAN</span>
                 <a href="#contact" class="track-buy">$40</a>
               </li>
-              <li class="track" data-src="Audio/big-game-type-beat.mp3" data-name="Big Game Type Beat">
+              <li class="track" data-src="Audio/EV0LVEmp3.mp3" data-name="EV0LVE">
                 <span class="track-num">6</span>
-                <span class="track-name">Big Game Type Beat</span>
+                <span class="track-name">EV0LVE</span>
                 <a href="#contact" class="track-buy">$40</a>
               </li>
-              <li class="track" data-src="Audio/harvard-yeat-type-beat.mp3" data-name="Harvard Yeat Type Beat">
+              <li class="track" data-src="Audio/FAITHmp3.mp3" data-name="FAITH">
                 <span class="track-num">7</span>
-                <span class="track-name">Harvard Yeat Type Beat</span>
+                <span class="track-name">FAITH</span>
+                <a href="#contact" class="track-buy">$40</a>
+              </li>
+              <li class="track" data-src="Audio/LAST HOPE.mp3" data-name="LAST HOPE">
+                <span class="track-num">8</span>
+                <span class="track-name">LAST HOPE</span>
+                <a href="#contact" class="track-buy">$40</a>
+              </li>
+              <li class="track" data-src="Audio/WHERE WERE YOU.mp3" data-name="WHERE WERE YOU">
+                <span class="track-num">9</span>
+                <span class="track-name">WHERE WERE YOU</span>
+                <a href="#contact" class="track-buy">$40</a>
+              </li>
+              <li class="track" data-src="Audio/BLEED.mp3" data-name="BLEED">
+                <span class="track-num">10</span>
+                <span class="track-name">BLEED</span>
                 <a href="#contact" class="track-buy">$40</a>
               </li>
             </ol>  
@@ -174,8 +192,8 @@
       <!-------------------Testimonials------------->
       <div id="testimonials">
           <div class="container">
-              <h1 class="section-title">Testimonials</h1>
-                  <div class="testimonial-list" id="testimonialList">
+              <h1 class="section-title fade-in">Testimonials</h1>
+                  <div class="testimonial-list fade-in" id="testimonialList">
                     <div class="testimonial">
                     <p class="testimonial-quote">"I have been learning how to make beats from Arjun since 2025. He is very talented!"</p>
                     <p class="testimonial-author">- Sowmya Srikant, family &amp; student</p>
@@ -183,26 +201,28 @@
                     <a href="Images/testimonial-sowmya.jpeg" target="_blank" rel="noopener noreferrer" class="testimonial-link">Original Email</a>           
                     </div>
                   </div>
-                <form class="contact-form testimonial-form" action="mailto:arjun.srikantc09@gmail.com" method="post" enctype="text/plain">
+                <form class="contact-form testimonial-form fade-in" action="https://formspree.io/f/xwlpvlre" method="POST">
                   <input type= "text" name= "name" placeholder= "Name" required>
                   <input type= "email" name= "email" placeholder= "Email" required>
                   <textarea name="testimonial" placeholder="Write your testimonial here..." rows="4" required></textarea>
                   <button type="submit" class="beats-btn contact-submit">Submit</button>
+                  <p class="form-status" aria-live="polite"></p>
                 </form>
           </div>
         </div>
 <!---------------------Contact------------------->
         <div id="contact">
           <div class="container">
-            <h1 class="section-title">Contact Me</h1>
-            <form class="contact-form" action="mailto:arjun.srikantc09@gmail.com" method="post" enctype="text/plain">
+            <h1 class="section-title fade-in">Contact Me</h1>
+            <form class="contact-form fade-in" action="https://formspree.io/f/xwlpvlre" method="POST">
               <input type= "text" name= "name" placeholder= "Name" required>
               <input type= "email" name= "email" placeholder= "Email" required>
               <input type= "text" name= "subject" placeholder= "Subject">
               <textarea name="message" placeholder="Type your message here..." rows="6" required></textarea>
               <button type="submit" class="beats-btn contact-submit">Submit</button>
+              <p class="form-status" aria-live="polite"></p>
             </form>  
-            <div class="social-links">
+            <div class="social-links fade-in">
               <a href="https://youtube.com/@imfwaj?si=CEfXIg4M69HmiP4a" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube">
                     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8ZM9.6 15.5V8.5L15.8 12Z"/></svg>
               </a> 
@@ -216,6 +236,10 @@
         <footer class="site-footer">
           <p>© 2026 IMFWAJ • Music Producer</p>
         </footer>
+
+        <button id="backToTop" class="back-to-top" aria-label="Back to top">
+           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+        </button>
 
         <script src="script.js"></script>
   </body>

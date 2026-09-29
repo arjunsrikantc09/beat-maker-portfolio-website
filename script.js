@@ -1,4 +1,16 @@
-const audio = document.getElementById('audioEl');
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
+if (window.location.hash) {
+    history.replaceState(null, '', window.location.pathname + window.location.search);
+}
+window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+window.addEventListener('load', () => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' }), 0);
+});
+
+    const audio = document.getElementById('audioEl');
 const playBtn = document.getElementById('playBtn');
 const playIcon = document.getElementById('playIcon');
 const prevBtn = document.getElementById('prevBtn');
@@ -157,12 +169,83 @@ document.querySelectorAll('.track-buy').forEach((btn) => {
 
 loadTrack(0, false);
 
-const testimonialForm = document.querySelector('.testimonial-form');
-testimonialForm.addEventListener('submit', () => {
-    setTimeout(() => testimonialForm.reset(), 300);
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            revealObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+
+document.querySelectorAll('.fade-in').forEach((el) => revealObserver.observe(el));
+
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+
+navToggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('nav-open');
+    navToggle.classList.toggle('is-open', isOpen);
+    navToggle.setAttribute('aria-expanded', isOpen);
 });
 
+navLinks.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('nav-open');
+        navToggle.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', false);
+    });
+});
+
+function handleFormSubmit(form) {
+    const status = form.querySelector('.form-status');
+    const submitBtn = form.querySelector('button[type="submit"]');
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        submitBtn.disabled = true;
+        status.textContent = '';
+        status.classList.remove('form-status-success', 'form-status-error');
+
+        try {
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (response.ok) {
+                form.reset();
+                status.textContent = "Thanks! Your message has been sent.";
+                status.classList.add('form-status-success');
+            } else {
+                status.textContent = "Something went wrong. Please try again.";
+                status.classList.add('form-status-error');
+            }
+         } catch (error) {
+                status.textContent = "Something went wrong. Please try again.";
+                status.classList.add('form-status-error');
+            }
+
+            submitBtn.disabled = false;
+
+            setTimeout(() => {
+                status.textContent = '';
+                status.classList.remove('form-status-success', 'form-status-error');
+            }, 4000);
+        });
+    }
+
+const testimonialForm = document.querySelector('.testimonial-form');
+handleFormSubmit(testimonialForm);
+
 const contactForm = document.querySelector('#contact form');
-contactForm.addEventListener('submit', () => {
-    setTimeout(() => contactForm.reset(), 300);
+handleFormSubmit(contactForm);
+
+const backToTop = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+    backToTop.classList.toggle('is-visible', window.scrollY > 500);
+});
+backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
 });
