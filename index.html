@@ -6,18 +6,19 @@
     <meta http-equiv="X-UA-compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arjun's Portfolio Website</title>
-    <meta name="description" content="Premium beats, custom production, and mixing services by IMFWAJ.">
+    <meta name="description" content="Music producer and beat maker blending hyperpop, hip-hop, and rock into experimental DMV underground trap. Beats, tutoring, and collaborations.">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
+<!-- Link preview tags (Open Graph for social media, Twitter/X cards) -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Arjun's Portfolio Website">
-    <meta property="og:description" content="Premium beats, custom production, and mixing services by IMFWAJ.">
-    <meta property="og:image" content="Images/IMFWAJ_logo.PNG">
+    <meta property="og:description" content="Music producer and beat maker blending hyperpop, hip-hop, and rock into experimental DMV underground trap. Beats, tutoring, and collaborations.">
+    <meta property="og:image" content="https://arjunsrikantc09.github.io/beat-maker-portfolio-website/Images/IMFWAJ_logo.PNG">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Arjun's Portfolio Website">
-    <meta name="twitter:description" content="Premium beats, custom production, and mixing services by IMFWAJ.">
-    <meta name="twitter:image" content="Images/IMFWAJ_logo.PNG">
+    <meta name="twitter:description" content="Music producer and beat maker blending hyperpop, hip-hop, and rock into experimental DMV underground trap. Beats, tutoring, and collaborations.">
+    <meta name="twitter:image" content="https://arjunsrikantc09.github.io/beat-maker-portfolio-website/Images/IMFWAJ_logo.PNG">
 
     <link rel="stylesheet" href="style.css">
   </head>
@@ -34,7 +35,7 @@
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#stats">Stats</a></li>
-                    <li><a href="#services">Services</a></li>
+                    <li><a href="#services">Tutoring</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact Me</a></li>
                 </ul>
@@ -61,9 +62,7 @@
                     <img src="Images/About_me_pic.jpeg">
                 </div>
                 <div class="about-col-2 fade-in">
-                    <p> I'm a music producer and beat maker blending hyperpop, hip-hop, and rock into my own style of DMV underground trap. 
-                        Over 5 years, that mix of influences has grown into a full creative journey — producing, selling, and collaborating 
-                        with artists from all kinds of backgrounds.</p>
+                    <p>I am a music producer and beat maker with 5 years of experience turning ideas into sound. My work blends hyperpop, hip-hop, and rock into experimental DMV underground trap. What started as a love for rhythmic patterns has grown into a creative journey of producing, selling, tutoring and collaborating with artists from diverse backgrounds. Rooted in the DMV but never boxed in, I make music for artists who aren’t afraid to break the mold. Let’s build something together.</p>
                 </div>
             </div>
         </div>
@@ -71,19 +70,19 @@
       <!---------------------Stats--------------------------->
       <div id="stats">
         <div class="container">
-          <h1 class="section-title fade-in">YouTube Stats</h1>
+          <h1 class="section-title fade-in">Producer Stats</h1>
           <div class="stats-grid fade-in">
             <div class="stat-card">
-              <p class="stat-number">4,320+</p>
-              <p class="stat-label">Subscribers</p>
+              <p class="stat-number">4,340+</p>
+              <p class="stat-label">YouTube Subscribers</p>
             </div>
             <div class="stat-card">
-              <p class="stat-number">2.1<br>million+</p>
-              <p class="stat-label">Views</p>
+              <p class="stat-number">32<br>million+</p>
+              <p class="stat-label">Streams</p>
               </div>
             <div class="stat-card">
-              <p class="stat-number">255+</p>
-              <p class="stat-label">Beats</p>
+              <p class="stat-number">3,500+</p>
+              <p class="stat-label">Original Beats</p>
               </div>
             <div class="stat-card">
               <p class="stat-number">2,600+</p>
@@ -93,18 +92,20 @@
           <a href="https://youtube.com/@imfwaj?si=CEfXIg4M69HmiP4a" target="_blank" rel="noopener noreferrer" class="beats-btn stats-link">View Channel</a>
           </div>
       </div>
-    <!------------------------Services---------------->
+    <!------------------------Tutoring---------------->
       <div id="services">
         <div class="container">
-          <h1 class="section-title fade-in">Services</h1>
+          <h1 class="section-title fade-in">Tutoring</h1>
           <div class="services-grid fade-in">
             <div class="service-square">
-              <div class="service-icon">$$</div>
-              <p class="service-text">You can buy beats from me</p>
-            </div>
-            <div class="service-square">
               <div class="service-icon">&#127899;</div>
-              <p class="service-text">I can teach you how to make beats</p>
+              <ul class="service-list">
+                <li>Digital Audio Production</li>
+                <li>Rhythm &amp; Drum Programming</li>
+                <li>Audio Engineering Essentials</li>
+                <li>Sound Design and Modern Music Theory</li>
+                <li>Brand Building and Business Strategy</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -116,7 +117,7 @@
 
              <div class="player fade-in">
                <div class="player-art"> 
-                <img src="Images/download.jpeg">
+                <img src="Images/IMFWAJ_logo.PNG" alt="IMFWAJ logo">
                </div>
                <div class="player-main">
                 <button class="play-btn" id="playBtn">
@@ -134,6 +135,7 @@
                </div>
                <canvas id="visualizer" class="visualizer"></canvas>
               </div>
+              <!-- Audio Player files -->
             <ol class="tracklist fade-in" id="tracklist">
               <li class="track active" data-src="Audio/AIMED IN.mp3" data-name="AIMED IN">
                 <span class="track-num">1</span>
@@ -193,14 +195,25 @@
       <div id="testimonials">
           <div class="container">
               <h1 class="section-title fade-in">Testimonials</h1>
-                  <div class="testimonial-list fade-in" id="testimonialList">
-                    <div class="testimonial">
-                    <p class="testimonial-quote">"I have been learning how to make beats from Arjun since 2025. He is very talented!"</p>
-                    <p class="testimonial-author">- Sowmya Srikant, family &amp; student</p>
-                    <p class="testimonial-date">August 11, 2026</p>
-                    <a href="Images/testimonial-sowmya.jpeg" target="_blank" rel="noopener noreferrer" class="testimonial-link">Original Email</a>           
-                    </div>
+                <div class="testimonial-list fade-in" id="testimonialList">
+                  <!-- Original Email links open a privacy-redacted screenshot as proof -->
+                  <div class="testimonial">
+                    <p class="testimonial-quote">"One of my favorite producers to work with — wide diversity and lots of different sounds. He also offers different services, including engineering and mixing/mastering."</p>
+                    <p class="testimonial-date">August 26, 2026</p>
+                    <a href="Images/testimonial-sliimewick.jpg" target="_blank" rel="noopener noreferrer" class="testimonial-link">Original Email</a>
                   </div>
+                  <div class="testimonial">
+                    <p class="testimonial-quote">"Working with IMFWAJ has made me a better producer. I was impressed by his beats before we even met, and since then we've made countless tracks together, linked up with artists around the DMV, and became real friends along the way."</p>
+                    <p class="testimonial-date">September 4, 2026</p>
+                    <a href="Images/testimonial-prodigy13k.jpg" target="_blank" rel="noopener noreferrer" class="testimonial-link">Original Email</a>
+                  </div>
+                  <div class="testimonial">
+                    <p class="testimonial-quote">"Arjun is an amazing producer and a real inspiration for people trying to express themselves through music. He took the time to break down his process — the DAW, the small details — and shares his music industry knowledge generously, all while growing his own brand and handling school."</p>
+                    <p class="testimonial-date">September 22, 2026</p>
+                    <a href="Images/testimonial-akaolisa.jpg" target="_blank" rel="noopener noreferrer" class="testimonial-link">Original Email</a>
+                  </div>         
+                </div>
+                <!-- Testimonial form: sent to Formspree -->
                 <form class="contact-form testimonial-form fade-in" action="https://formspree.io/f/xwlpvlre" method="POST">
                   <input type= "text" name= "name" placeholder= "Name" required>
                   <input type= "email" name= "email" placeholder= "Email" required>
