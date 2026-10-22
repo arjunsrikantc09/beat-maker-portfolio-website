@@ -16,12 +16,12 @@ I am a music producer and beat maker. I am creating a fully responsive music por
 - **View source link**: the Git </> button in the nav bar and a footer link both open the GitHub repository.
 
 # Project Structure
-index.html - page structure and content
-style.css - all styling including responsive breakpoints
-script.js - audio player, visualizer, forms, menu, scroll effects
-Audio/ - the ten tracks played by the site
-Images/ - logo, photos, testimonial screenshots
-favicon.svg - browser tab icon
+- index.html - page structure and content
+- style.css - all styling including responsive breakpoints
+- script.js - audio player, visualizer, forms, menu, scroll effects
+- Audio/ - the ten tracks played by the site
+- Images/ - logo, photos, testimonial screenshots
+- favicon.svg - browser tab icon
 
 # Resources I learnt from
 - YouTube tutorials
