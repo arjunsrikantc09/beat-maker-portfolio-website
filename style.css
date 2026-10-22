@@ -94,6 +94,7 @@ nav ul li a::after {
     bottom: -6px;
     transition: 0.5s;
 }
+
 /* Hover effects only on devices with a real mouse; taps do not stick */
 @media (hover: hover) and (pointer: fine){
     nav ul li a:hover::after {
@@ -283,6 +284,7 @@ nav ul li a::after {
     clip-path: polygon(0 0, 100% 0, 100% 82%, 0 100%);
     padding: 35px 40px 55px;
 }
+
 /* Fixed canvas size, otherwise it keeps growing when JS resets pixels */
 .visualizer {
     flex-basis: 100%;
@@ -637,6 +639,16 @@ padding: 80px 0 100px;
     width: 15px;
     height: 15px;
 }
+/* Wider pill for the "Git </>" link */
+.social-icon-label{
+    width: auto;
+    padding: 0 12px;
+    border-radius: 17px;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
 @media (hover: hover) and (pointer: fine){
 .social-icon:hover{
     transform: translateY(-4px);
@@ -651,6 +663,17 @@ padding: 80px 0 100px;
     padding: 30px 0;
     color: #666;
     font-size: 13px;
+}
+/* GitHub link: light grey and underlined */
+.site-footer a{
+    color: #ababab;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+@media (hover: hover) and (pointer: fine){
+    .site-footer a:hover{
+        color: #fff;
+    }
 }
 /*------------------------Scroll Reveal----------------------*/
 .fade-in{
